@@ -1,0 +1,44 @@
+.item{
+    border: 1px solid greenyellow;
+    padding: 16px;
+    margin: 4px;
+    border-radius: 4px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.line3{
+    width: 100%;
+    margin-bottom: 8px;
+}
+.line3 span{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.line3 span:nth-child(1){
+    margin-right: 2rem;
+}
+.line3 span:nth-child(2){
+    color: rgb(196, 24, 196);
+}
+
+.line4{
+    text-align: left;
+    color: purple;
+}
+
+.item:hover, .item:active{
+    background-color: greenyellow;
+    cursor: pointer;
+}
+
+.img_{
+    width: 200px;
+}
+
+.item2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
