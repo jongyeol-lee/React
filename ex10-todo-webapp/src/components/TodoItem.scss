@@ -17,7 +17,7 @@
     }
 
     .content{
-        //나머지 공간 모두 차지 flex-grow
+        // 나머지 공간 모두 차지 flex-grow
         flex: 1;
         margin-left: 1rem;
     }
@@ -31,7 +31,7 @@
         pad: 2px;
     }
 
-    &+&{
+    & + &{
         border-top: 1px solid wheat;
     }
 
