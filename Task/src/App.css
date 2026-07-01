@@ -1,47 +1,62 @@
-/* ===== 전체 ===== */
+/* ===========================
+   Reset
+=========================== */
 
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family: system-ui, sans-serif;
-    font-weight: 300;
 }
 
 body{
-    background:#f5f6fa;
+    background:#f4f6fb;
+    font-family:Pretendard,"Noto Sans KR",sans-serif;
+    color:#222;
 }
 
-/* ===== Header ===== */
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+button{
+    cursor:pointer;
+    font-family:inherit;
+}
+
+/* ===========================
+   Header
+=========================== */
 
 .header{
 
     height:70px;
 
-    background:white;
+    background:#6C63FF;
+
+    color:white;
 
     display:flex;
 
     align-items:center;
 
-    justify-content:space-between;
-
     padding:0 30px;
 
-    box-shadow:0 2px 10px rgba(0,0,0,.08);
+    box-shadow:0 2px 8px rgba(0,0,0,.15);
 
 }
 
 .header h1{
 
-    font-size: 20px;
-    font-weight: 700;
-    color:#5a5cf6;
-    letter-spacing:-1px;
+    font-size:24px;
+
+    font-weight:700;
 
 }
 
-/* ===== Layout ===== */
+/* ===========================
+   Layout
+=========================== */
 
 .container{
 
@@ -51,17 +66,19 @@ body{
 
 }
 
-/* ===== Sidebar ===== */
+/* ===========================
+   Sidebar
+=========================== */
 
 .sidebar{
 
-    width:230px;
+    width:220px;
 
     background:white;
 
-    padding:25px;
+    border-right:1px solid #e5e5e5;
 
-    box-shadow:2px 0 10px rgba(0,0,0,.05);
+    padding:25px;
 
 }
 
@@ -79,21 +96,29 @@ body{
 
 .sidebar a{
 
-    text-decoration:none;
+    display:block;
 
-    color:#555;
+    padding:12px;
+
+    border-radius:8px;
 
     font-weight:600;
+
+    transition:.2s;
 
 }
 
 .sidebar a:hover{
 
-    color:#ad11d4;
+    background:#6C63FF;
+
+    color:white;
 
 }
 
-/* ===== Content ===== */
+/* ===========================
+   Content
+=========================== */
 
 .content{
 
@@ -103,7 +128,9 @@ body{
 
 }
 
-/* ===== Dashboard ===== */
+/* ===========================
+   Dashboard
+=========================== */
 
 .dashboard{
 
@@ -113,7 +140,7 @@ body{
 
     gap:20px;
 
-    margin-bottom:30px;
+    margin-bottom:25px;
 
 }
 
@@ -121,35 +148,37 @@ body{
 
     background:white;
 
-    border-radius:15px;
+    border-radius:12px;
 
     padding:20px;
 
-    box-shadow:0 4px 15px rgba(0,0,0,.05);
+    box-shadow:0 2px 8px rgba(0,0,0,.08);
 
 }
 
 .card h3{
 
+    color:#666;
+
     font-size:15px;
 
-    color:#666;
+    margin-bottom:10px;
 
 }
 
 .card p{
 
-    margin-top:10px;
-
-    font-size:35px;
-
-    font-weight:bold;
+    font-size:34px;
 
     color:#6C63FF;
 
+    font-weight:bold;
+
 }
 
-/* ===== Search ===== */
+/* ===========================
+   Search
+=========================== */
 
 .topMenu{
 
@@ -167,35 +196,117 @@ body{
 
     width:350px;
 
-    padding:12px;
+    height:42px;
 
-    border-radius:8px;
+    padding:0 15px;
 
     border:1px solid #ddd;
 
+    border-radius:8px;
+
+    outline:none;
+
 }
 
-/* ===== Button ===== */
+.searchBar input:focus{
 
-.writeBtn{
+    border-color:#6C63FF;
+
+}
+
+/* ===========================
+   Button
+=========================== */
+
+.writeBtn,
+.btnBox button{
+
     background:#6C63FF;
+
     color:white;
+
     border:none;
-    padding:12px 25px;
+
     border-radius:8px;
-    cursor:pointer;
+
+    padding:11px 22px;
+
     transition:.2s;
 
 }
 
-.writeBtn:hover{
+.writeBtn:hover,
+.btnBox button:hover{
 
-    transform:scale(1.05);
+    background:#574ef5;
 
 }
 
+/* ===========================
+   Popular Board
+=========================== */
 
-/* ===== Table ===== */
+.popularBoard{
+
+    background:white;
+
+    padding:20px;
+
+    border-radius:12px;
+
+    margin-bottom:20px;
+
+    box-shadow:0 2px 8px rgba(0,0,0,.08);
+
+}
+
+.popularBoard h3{
+
+    margin-bottom:15px;
+
+}
+
+.popularBoard ul{
+
+    list-style:none;
+
+}
+
+.popularBoard li{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    padding:10px 0;
+
+    border-bottom:1px solid #eee;
+
+}
+
+.popularBoard li:last-child{
+
+    border:none;
+
+}
+
+.popularBoard a{
+
+    color:#222;
+
+    font-weight:600;
+
+}
+
+.popularBoard a:hover{
+
+    color:#6C63FF;
+
+}
+
+/* ===========================
+   Table
+=========================== */
 
 .boardTable{
 
@@ -205,17 +316,15 @@ body{
 
     border-collapse:collapse;
 
-    border-radius:15px;
+    border-radius:12px;
 
     overflow:hidden;
 
-    box-shadow:0 4px 15px rgba(0,0,0,.05);
+    box-shadow:0 2px 8px rgba(0,0,0,.08);
 
 }
 
 .boardTable th{
-
-    font-weight: bold;
 
     background:#6C63FF;
 
@@ -223,30 +332,45 @@ body{
 
     padding:15px;
 
+    font-size:15px;
+
 }
 
 .boardTable td{
 
-    font-size: 17px;
-    font-weight: bold;
-    color: black;
-    opacity: 1;
+    padding:15px;
 
     text-align:center;
 
-    padding:15px;
-
     border-bottom:1px solid #eee;
+
+    color:#222;
 
 }
 
 .boardTable tr:hover{
 
-    background:#fafafa;
+    background:#f7f8ff;
 
 }
 
-/* ===== Write / Edit / View ===== */
+.boardTable a{
+
+    color:#222;
+
+    font-weight:600;
+
+}
+
+.boardTable a:hover{
+
+    color:#6C63FF;
+
+}
+
+/* ===========================
+   Write / Edit / View
+=========================== */
 
 .writePage,
 .editPage,
@@ -254,15 +378,23 @@ body{
 
     width:900px;
 
-    margin:50px auto;
+    margin:40px auto;
 
     background:white;
 
-    padding:40px;
+    padding:35px;
 
-    border-radius:15px;
+    border-radius:12px;
 
-    box-shadow:0 5px 15px rgba(0,0,0,.08);
+    box-shadow:0 2px 8px rgba(0,0,0,.08);
+
+}
+
+.writePage h2,
+.editPage h2,
+.viewPage h2{
+
+    margin-bottom:20px;
 
 }
 
@@ -271,9 +403,15 @@ body{
 
     width:100%;
 
-    margin:10px 0;
+    height:45px;
 
-    padding:12px;
+    margin-bottom:15px;
+
+    padding:0 15px;
+
+    border:1px solid #ddd;
+
+    border-radius:8px;
 
 }
 
@@ -282,40 +420,22 @@ body{
 
     width:100%;
 
-    margin-top:10px;
+    padding:15px;
 
-    padding:12px;
+    border:1px solid #ddd;
+
+    border-radius:8px;
+
+    resize:none;
 
 }
 
 .btnBox{
 
-    margin-top:20px;
-
     display:flex;
 
     gap:10px;
 
-}
-
-.btnBox button{
-
-    padding:10px 20px;
-
-    border:none;
-
-    border-radius:8px;
-
-    cursor:pointer;
-
-    background:#6C63FF;
-
-    color:white;
-
-}
-
-.btnBox button:hover{
-
-    opacity:.9;
+    margin-top:20px;
 
 }

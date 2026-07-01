@@ -2,6 +2,8 @@ import { Link } from "react-router-dom"
 
 function BoardTable({ boards }) {
 
+    console.log(boards)
+
     return (
 
         <table className="boardTable">
